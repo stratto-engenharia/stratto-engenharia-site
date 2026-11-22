@@ -1,0 +1,157 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Stratto Engenharia</title>
+<meta name="description" content="Stratto Engenharia: gestão e inteligência de negócio para empresas.">
+<meta name="theme-color" content="#0b1c36">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%230e2648'/%3E%3Cg fill='%23fff'%3E%3Crect x='10' y='40' width='9' height='14'/%3E%3Crect x='22' y='32' width='9' height='22'/%3E%3Crect x='34' y='24' width='9' height='30'/%3E%3C/g%3E%3Crect x='46' y='14' width='9' height='40' fill='%23f5a623'/%3E%3Ccircle cx='50' cy='8' r='4' fill='%23a81c3e'/%3E%3C/svg%3E">
+<style>
+  :root {
+    --marinho-escuro: #071429;
+    --marinho: #0e2648;
+    --marinho-claro: #163a66;
+    --branco: #ffffff;
+    --ambar: #f5a623;
+    --bordo: #a81c3e;
+    --texto-suave: #b9c6da;
+  }
+  * { box-sizing: border-box; }
+  html, body { height: 100%; margin: 0; }
+  body {
+    font-family: "Segoe UI", system-ui, -apple-system, Roboto, "Helvetica Neue", Arial, sans-serif;
+    color: var(--branco);
+    background: linear-gradient(150deg, var(--marinho-escuro) 0%, var(--marinho) 45%, var(--marinho-claro) 100%);
+    background-attachment: fixed;
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
+    overflow-x: hidden;
+  }
+  .estratos {
+    position: fixed;
+    left: 0; right: 0; bottom: 0;
+    width: 100%;
+    height: 38vh;
+    min-height: 180px;
+    pointer-events: none;
+  }
+  main {
+    position: relative;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 48px 16px 24px;
+  }
+  .marca { width: min(190px, 46vw); height: auto; }
+  .nome {
+    margin: 22px 0 0;
+    font-size: clamp(2.2rem, 8vw, 3.6rem);
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    line-height: 1;
+  }
+  .sub {
+    margin: 10px 0 0;
+    font-size: clamp(0.85rem, 2.6vw, 1.1rem);
+    font-weight: 600;
+    letter-spacing: 0.48em;
+    padding-left: 0.48em;
+    color: var(--ambar);
+  }
+  .regua {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin: 34px 0 26px;
+  }
+  .regua span:first-child { width: 120px; height: 4px; border-radius: 2px; background: var(--bordo); }
+  .regua span:last-child { width: 14px; height: 14px; border-radius: 50%; background: var(--bordo); }
+  h1 {
+    max-width: 30rem;
+    margin: 0;
+    font-size: clamp(1.25rem, 4vw, 1.7rem);
+    font-weight: 600;
+    line-height: 1.4;
+    text-wrap: balance;
+  }
+  .frase {
+    max-width: 34rem;
+    margin: 14px 0 0;
+    font-size: clamp(1rem, 3vw, 1.15rem);
+    line-height: 1.6;
+    color: var(--texto-suave);
+    text-wrap: pretty;
+  }
+  .contato {
+    display: inline-block;
+    margin-top: 30px;
+    padding: 12px 22px;
+    border: 1px solid rgba(255, 255, 255, 0.35);
+    border-radius: 999px;
+    color: var(--branco);
+    font-weight: 600;
+    text-decoration: none;
+    overflow-wrap: anywhere;
+    transition: background-color 0.2s, border-color 0.2s;
+  }
+  .contato:hover, .contato:focus-visible { background: var(--bordo); border-color: var(--bordo); outline: none; }
+  footer {
+    position: relative;
+    padding: 18px 16px 22px;
+    text-align: center;
+    font-size: 0.85rem;
+    color: var(--texto-suave);
+  }
+  @media (prefers-reduced-motion: no-preference) {
+    .tendencia { stroke-dasharray: 260; stroke-dashoffset: 260; animation: tracar 1.4s 0.3s ease-out forwards; }
+    .ponto { opacity: 0; animation: surgir 0.4s 1.5s ease-out forwards; }
+    @keyframes tracar { to { stroke-dashoffset: 0; } }
+    @keyframes surgir { to { opacity: 1; } }
+  }
+</style>
+</head>
+<body>
+
+<svg class="estratos" viewBox="0 0 1600 400" preserveAspectRatio="none" aria-hidden="true">
+  <g fill="none" stroke="#ffffff" stroke-opacity="0.09" stroke-width="2" vector-effect="non-scaling-stroke">
+    <polyline points="0,150 700,150 760,100 1600,100"/>
+    <polyline points="0,250 900,250 960,200 1600,200"/>
+    <polyline points="0,300 1000,300 1060,250 1600,250"/>
+    <polyline points="0,350 1100,350 1160,300 1600,300"/>
+    <polyline points="0,400 1200,400 1260,350 1600,350"/>
+  </g>
+  <polyline points="0,200 800,200 860,150 1340,150" fill="none" stroke="#a81c3e" stroke-width="3" vector-effect="non-scaling-stroke"/>
+</svg>
+
+<main>
+  <svg class="marca" viewBox="0 0 256 250" role="img" aria-label="Logo da Stratto Engenharia">
+    <g stroke="#ffffff" stroke-width="44" stroke-dasharray="16 5" fill="none">
+      <line x1="38" y1="240" x2="38" y2="182"/>
+      <line x1="98" y1="240" x2="98" y2="140"/>
+      <line x1="158" y1="240" x2="158" y2="98"/>
+      <line x1="218" y1="240" x2="218" y2="56"/>
+    </g>
+    <rect x="196" y="56" width="44" height="16" fill="#f5a623"/>
+    <polyline class="tendencia" points="38,155 98,113 158,71 218,29" fill="none" stroke="#a81c3e" stroke-width="9" stroke-linecap="round" stroke-linejoin="round"/>
+    <circle class="ponto" cx="218" cy="29" r="14" fill="#a81c3e"/>
+  </svg>
+
+  <p class="nome">STRATTO</p>
+  <p class="sub">ENGENHARIA</p>
+
+  <div class="regua" aria-hidden="true"><span></span><span></span></div>
+
+  <h1>Gestão e inteligência de negócio para empresas.</h1>
+
+  <a class="contato" href="mailto:alexandre.dittert@strattoengenharia.com.br">alexandre.dittert@strattoengenharia.com.br</a>
+</main>
+
+<footer>&copy; 2026 Stratto Engenharia</footer>
+
+</body>
+</html>
